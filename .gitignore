@@ -2,6 +2,3 @@
 .vscode
 __pycache__/
 
-static/video/*
-static/video
-# static/code_pdfs/*
