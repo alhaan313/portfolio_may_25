@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/hobbies.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="hobbies-container">
+    <div class="intro-section">
+        <h1>My Hobbies</h1>
+        <p class="lead">When I'm not coding, you'll find me...</p>
+    </div>
+
+    <div class="hobbies-grid">
+        <div class="hobby-card chess-card" style="background-image: url('{{ url_for('static', filename='images/chess.jpg') }}'), linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="hobby-icon">
+                    <i class="fas fa-chess"></i>
+                </div>
+                <h2>Chess</h2>
+                <p class="hobby-description">
+                    Strategic mind games and tactical battles on the 64 squares.
+                </p>
+                <div class="chess-stats">
+                    <div class="elo-rating">
+                        <span class="rating-label">Chess.com Rating</span>
+                        <span class="rating-value">900 ELO</span>
+                    </div>
+                    <a href="https://www.chess.com/member/alhaan313" target="_blank" class="chess-profile-link">
+                        View My Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hobby-card f1-card" style="background-image: url('{{ url_for('static', filename='images/f1.jpg') }}'), linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="hobby-icon">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <h2>Formula 1</h2>
+                <p class="hobby-description">
+                    A passionate F1 enthusiast following the high-speed drama and technical brilliance of motorsport's pinnacle.
+                </p>
+                <div class="hobby-stats">
+                    <div class="stat">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Speed</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-cog"></i>
+                        <span>Tech</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>Racing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hobby-card cube-card" style="background-image: url('{{ url_for('static', filename='images/rubiks.jpeg') }}'), linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%)">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="hobby-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h2>Rubik's Cube</h2>
+                <p class="hobby-description">
+                    Solving puzzles and challenging myself to improve my speed and technique.
+                </p>
+                <div class="cube-stats">
+                    <div class="solve-time">
+                        <span class="time-label">Average Solve Time</span>
+                        <span class="time-value">54 seconds</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

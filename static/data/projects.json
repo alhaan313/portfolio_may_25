@@ -1,0 +1,151 @@
+[
+    {
+      "id": "cap-gen",
+      "name": "Image Captioner",
+      "description": "A web application that generates captions for images using BLIP-2 and presents chat-style reasoning with VisualChatGPT.",
+      "github": "https://github.com/alhaan313/ImageCaptioner",
+      "hosted_link": "https://image-captioner-xi.vercel.app",
+      "tech_used": [
+        "Flask",
+        "Bootstrap",
+        "Hugging Face APIs",
+        "BLIP-2"
+      ],
+      "features": [
+        "Generates intelligent captions for uploaded images",
+        "Chat interface to explain image understanding",
+        "Uses multiple vision-language transformer models",
+        "Responsive web design"
+      ],
+      "highlight": "Explains visual content with human-like reasoning using multiple AI models.",
+      "image": "static/images/cap_gen.png",
+      "video": "static/video/cap_gen.mp4",
+      "code_pdf": "static/code_pdfs/cap_gen.pdf",
+      "detailed_content": "Turn any image into a story, with visual reasoning explained like a human. The Image Captioner app leverages cutting-edge vision-language models like BLIP-2 and VisualChatGPT to produce descriptive captions and human-like reasoning for uploaded images. It doesn't just tell you what's in the image—it explains why it thinks so, engaging users in a natural conversation. The system is modular and entirely local except for inference APIs. This makes it ideal for projects focusing on explainable AI. Designed with Flask and Bootstrap, it's lightweight, clean, and intuitive to use."
+    },
+    {
+      "id": "men-hel",
+      "name": "AI Mental Health Companion (Simplified)",
+      "description": "An AI chatbot trained to conduct mental health assessments using the PHQ-9 scale and personalized recommendations.",
+      "github": "https://github.com/alhaan313/simplified_version_ai_mental_health",
+      "hosted_link": null,
+      "tech_used": [
+        "FastAPI",
+        "Sentiment Analysis",
+        "Whisper",
+        "Websocket",
+        "Docker"
+      ],
+      "features": [
+        "Conversational interface for mental health checks",
+        "PHQ-9 questionnaire scoring",
+        "AI-powered response generation",
+        "Adaptive recommendations based on emotional state"
+      ],
+      "highlight": "An AI chatbot built with empathy and scientific rigor for mental health analysis.",
+      "image": "static/images/men_hel.jpeg",
+      "video": "static/video/men_hel.mp4",
+      "code_pdf": "static/code_pdfs/men_hel.pdf",
+      "detailed_content": "An empathetic chatbot that listens, scores, and advises—privately and securely. This project introduces a simplified mental health companion that combines clinical assessment (PHQ-9 scale) with AI-driven conversation. Built using Flask and Transformers, it asks mental health questions in a conversational tone and evaluates your state based on your answers. At the end, it gives you a detailed score and a soft summary of your mental wellbeing. It’s an intelligent and compassionate helper, created to assist students and working professionals to keep track of their mental state in a non-judgmental environment."
+    },
+    {
+      "id": "cod-pdf",
+      "name": "Code2PDF",
+      "description": "A tool that converts uploaded source code into a neatly formatted, syntax-highlighted PDF with optional watermarking.",
+      "github": "https://github.com/alhaan313/code2pdf",
+      "hosted_link": "https://code2pdf-ten.vercel.app",
+      "tech_used": [
+        "InnoScripts",
+        "Markdown",
+        "Pandoc",
+        "Xelatex",
+        "pyinstaller"
+      ],
+      "features": [
+        "Syntax highlighting for multiple languages",
+        "PDF export with watermark",
+        "Drag and drop file interface",
+        "Dark/light theme toggle"
+      ],
+      "highlight": "Turns your code into a beautifully formatted PDF—perfect for portfolios, printouts, and documentation.",
+      "image": "static/images/cod_pdf.png",
+      "video": "static/video/cod_pdf.mp4",
+      "code_pdf": "static/code_pdfs/cod_pdf.pdf",
+      "detailed_content": "From code to clean, printable PDFs with syntax highlighting and watermarking. Code2PDF is a web-based utility that takes source code (Python, C++, etc.) and converts it into professional-looking PDFs. Featuring Pygments for syntax highlighting and PyMuPDF for document generation, it supports multiple themes and watermarks. A standout use case is showcasing clean code in portfolios or academic submissions. The UI is responsive and intuitive, and you can export your code in just a few clicks. One of its highlights is the ability to automatically detect the language and style it accordingly."
+    },
+    {
+      "id": "ski-nav",
+      "name": "AI Skill Navigator",
+      "description": "An AI-powered recommender system that maps a user’s skills and interests to relevant AI career paths and resources.",
+      "github": "https://github.com/alhaan313/AI-SkillNavigator",
+      "hosted_link": null,
+      "tech_used": [
+        "Django",
+        "Scikit-learn",
+        "NLP",
+        "Textblob",
+        "Gemini LLM"
+      ],
+      "features": [
+        "Input-based skill profiling",
+        "AI job path suggestions",
+        "Dynamic course and resource recommendations",
+        "Text-based interface"
+      ],
+      "highlight": "Empowers learners to navigate their AI journey with tailored insights.",
+      "image": "static/images/ski_nav.png",
+      "video": "static/video/ski_nav.mp4",
+      "code_pdf": "static/code_pdfs/ski_nav.pdf",
+      "detailed_content": "Not sure where you fit in the AI world? This app gives you direction. AI Skill Navigator helps learners and professionals figure out which AI career paths suit them best. You input your current skills and interests, and the tool maps you to recommended AI job roles (like ML Engineer, Data Scientist) along with top resources to learn the necessary tools. Built with NLP and classification models, it uses your own journey as a reference to point you toward your next milestone. It’s like having an AI career mentor in your browser."
+    },
+    {
+      "id": "res-ats",
+      "name": "Resume Matcher AI",
+      "description": "Compares a user’s resume with job descriptions and provides a compatibility score and suggestions to improve match.",
+      "github": "https://github.com/alhaan313/resume-matcher-ai",
+      "hosted_link": null,
+      "tech_used": [
+        "AWS",
+        "Streamlit",
+        "Xelatex",
+        "SBert",
+        "Cosine Similarity"
+      ],
+      "features": [
+        "Resume-job match scoring",
+        "Real-time feedback",
+        "Highlights skill gaps",
+        "PDF input parsing"
+      ],
+      "highlight": "AI-based tool to increase your odds of passing ATS and impressing recruiters.",
+      "image": "static/images/res_ats.png",
+      "video": "static/video/res_ats.mp4",
+      "code_pdf": "static/code_pdfs/res_ats.pdf",
+      "detailed_content": "Bridge the gap between your resume and your dream job with smart matching. This tool allows you to upload your resume and a job description, and then it calculates a match score using NLP and transformer embeddings. It helps you identify where your resume aligns well and what’s missing. Designed for job seekers who want to beat Applicant Tracking Systems (ATS) and stand out, it’s especially useful for fresh graduates. Its main value lies in quick feedback that saves hours of guessing and rewriting."
+    },
+    {
+      "id": "mal-app",
+      "name": "AI-Powered Malware Detector",
+      "description": "A predictive app that identifies whether a software is benign or malicious using Random Forest and LightGBM models.",
+      "github": "https://github.com/alhaan313/AI_powered_malware_app",
+      "hosted_link": null,
+      "tech_used": [
+        "Androguard",
+        "LSTM",
+        "Cerebras",
+        "Transformers"
+      ],
+      "features": [
+        "Binary classification (malicious vs benign)",
+        "Feature importance visualization",
+        "Upload and scan executables",
+        "Trained on static malware dataset"
+      ],
+      "highlight": "Smart detection of potential malware using AI models with high precision.",
+      "image": "static/images/mal_app.png",
+      "video": "static/video/mal_app.mp4",
+      "code_pdf": "static/code_pdfs/mal_app.pdf",
+      "detailed_content": "Detect malicious files before they do damage—powered by AI. Built with Random Forest and LightGBM classifiers, this app analyzes software feature data and predicts whether it's safe to run. You upload feature vectors from executables (like entropy, byte frequency, etc.), and it returns a benign or malicious classification with confidence scores. Designed for cybersecurity enthusiasts and analysts, it’s a demo of what AI can do for digital safety. Feature importance plots show users how decisions were made—making this not just a detector but an educational tool too."
+    }
+  ]
+  

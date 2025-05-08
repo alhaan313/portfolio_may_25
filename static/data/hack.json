@@ -1,0 +1,59 @@
+{
+    "hackathons": [
+      {
+        "id": "codefiesta",
+        "name": "CodeFiesta",
+        "organizer": null,
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/codefiesta.pdf",
+        "description": null
+      },
+      {
+        "id": "cwg",
+        "name": "Code with Google",
+        "organizer": null,
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/cwg.pdf",
+        "description": null
+      },
+      {
+        "id": "flipkart",
+        "name": "Flipkart Grid",
+        "organizer": "Flipkart",
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/flipkart.pdf",
+        "description": null
+      },
+      {
+        "id": "iicc",
+        "name": "IICC Hackathon 1.0",
+        "organizer": "IICC",
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/iicc.pdf",
+        "description": null
+      },
+      {
+        "id": "iicc2",
+        "name": "IICC Hackathon 2.0",
+        "organizer": "IICC",
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/iicc2.pdf",
+        "description": null
+      },
+      {
+        "id": "rakathon",
+        "name": "Rakathon",
+        "organizer": null,
+        "date": null,
+        "role": null,
+        "certificate_link": "static/hackathon_certificates/rakathon.pdf",
+        "description": null
+      }
+    ]
+  }
+  

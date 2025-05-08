@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dsa.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="dsa-container">
+    <div class="intro-section">
+        <div class="intro-content">
+            <h1>Competitive Programming</h1>
+            <p class="lead">Track my progress across various coding platforms and problem-solving journeys</p>
+        </div>
+    </div>
+    
+    <div class="profiles-grid">
+        {% for profile in profiles %}
+        <div class="profile-card" style="--accent-color: {{ profile.color }}; --card-color-rgb: {{ profile.color.lstrip('#') | rgb_values }};">
+            <div class="profile-icon">
+                <i class="{{ profile.icon }}"></i>
+            </div>
+            <h3>{{ profile.platform }}</h3>
+            <span class="username">@{{ profile.username }}</span>
+            <a href="{{ profile.url }}" target="_blank" class="view-profile">
+                <i class="fas fa-external-link-alt"></i>
+                Visit Profile
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add staggered animation delay to cards
+    document.querySelectorAll('.profile-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+});
+</script>
+{% endblock %}

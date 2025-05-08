@@ -1,0 +1,345 @@
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: -3rem auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    padding-bottom: 1.5rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15);
+}
+
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+.project-card:nth-child(4) { animation-delay: 0.3s; }
+.project-card:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-media {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px 12px 0 0;
+    transform: translateZ(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-media {
+    transform: scale(1.02);
+}
+
+.project-image,
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-video {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-media:hover .project-image {
+    opacity: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: none;
+}
+
+.video-overlay i {
+    color: white;
+    font-size: 2rem;
+    background: rgba(13, 110, 253, 0.9);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.project-media:hover .video-overlay {
+    opacity: 1;
+}
+
+.project-media:hover .video-overlay i {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project-media:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-media:hover .project-video {
+    opacity: 1;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+}
+
+.card-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-badge {
+    padding: 0.4rem 0.8rem;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:nth-child(2n) {
+    animation-delay: 0.1s;
+}
+
+.tech-badge:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project-links {
+    margin-top: auto;
+    padding: 1.5rem 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.875rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.project-links a {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    min-width: 100px;
+    flex: 1;
+    max-width: 150px;
+}
+
+.project-links .btn-primary {
+    background: #0d6efd;
+    color: white;
+    border: none;
+}
+
+.project-links .btn-outline-primary {
+    color: #0d6efd;
+    border: 1.5px solid #0d6efd;
+}
+
+.project-links .btn-outline-secondary {
+    color: #6c757d;
+    border: 1.5px solid #6c757d;
+}
+
+.project-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.project-links .btn-primary:hover {
+    background: #0b5ed7;
+}
+
+.project-links .btn-outline-primary:hover {
+    background: rgba(13, 110, 253, 0.1);
+}
+
+.project-links .btn-outline-secondary:hover {
+    background: rgba(108, 117, 125, 0.1);
+    color: #495057;
+}
+
+#videoModal .modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+#videoModal .modal-header {
+    border: none;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+#videoModal .btn-close {
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#videoModal .btn-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#videoModal .modal-body {
+    padding: 0;
+}
+
+#videoModal video {
+    width: 100%;
+    max-height: 85vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#videoModal .modal-dialog {
+    max-width: min(80vw, 1200px);
+    margin: 1.75rem auto;
+}
+
+#videoModal.fade .modal-dialog {
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#videoModal.show .modal-dialog {
+    transform: scale(1);
+}
+
+.modal-backdrop.show {
+    opacity: 0.85;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+    padding: 6rem 2rem 8rem;
+    text-align: center;
+    color: white;
+}
+
+.intro-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.intro-section .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin-top: -2rem;
+    }
+    
+    .project-media {
+        height: 180px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .project-links a {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #videoModal .modal-dialog {
+        margin: 0.5rem;
+        max-width: 100%;
+    }
+}

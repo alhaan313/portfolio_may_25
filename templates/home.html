@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <section class="hero-section">
+        <div id="particles-js" class="particles-container"></div>
+        <div class="container position-relative">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Alhaan</h1>
+                <div class="hero-subtitle-wrapper">
+                    <p class="hero-subtitle">AI & Machine Learning Engineer | SDE</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/alhaan313" class="social-link">
+                        <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/alhaan/" class="social-link">
+                        <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <section class="bio-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="profile-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/my_image.jpeg') }}" alt="Profile Picture" class="profile-image">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="bio-content">
+                        <p class="bio-text">
+                            As a passionate and innovative technologist, I thrive on turning complex challenges into elegant solutions. My journey in computer science has been driven by an insatiable curiosity and a commitment to excellence. I specialize in AI/ML and Full Stack Development, constantly pushing the boundaries of what's possible in technology while maintaining a strong focus on creating practical, user-centric solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="education-card">
+                        <div class="edu-header">
+                            <h3>Hindustan Institute of Technology and Science</h3>
+                            <span class="year-badge">2021-2025</span>
+                        </div>
+                        <p class="degree">B.Tech Computer Science and Engineering (Data Science)</p>
+                        <p class="cgpa">CGPA: 9.1</p>
+                        <p class="graduation-info">Graduated: April 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="section-title">Skills</div>
+        <div class="skills-ticker-container">
+            <div class="skills-ticker-row">
+                <div class="ticker-track forward">
+                    <div class="ticker-item">Python</div>
+                    <div class="ticker-item">JavaScript</div>
+                    <div class="ticker-item">Java</div>
+                    <div class="ticker-item">C++</div>
+                    <div class="ticker-item">TensorFlow</div>
+                    <div class="ticker-item">PyTorch</div>
+                    <div class="ticker-item">Scikit-learn</div>
+                    <div class="ticker-item">Computer Vision</div>
+                </div>
+                <div class="ticker-track forward">
+                    <!-- First row duplicate -->
+                    <div class="ticker-item">Python</div>
+                    <div class="ticker-item">JavaScript</div>
+                    <div class="ticker-item">Java</div>
+                    <div class="ticker-item">C++</div>
+                    <div class="ticker-item">TensorFlow</div>
+                    <div class="ticker-item">PyTorch</div>
+                    <div class="ticker-item">Scikit-learn</div>
+                    <div class="ticker-item">Computer Vision</div>
+                </div>
+            </div>
+            <div class="skills-ticker-row">
+                <div class="ticker-track backward">
+                    <div class="ticker-item">React</div>
+                    <div class="ticker-item">Flask</div>
+                    <div class="ticker-item">Django</div>
+                    <div class="ticker-item">Node.js</div>
+                    <div class="ticker-item">Git</div>
+                    <div class="ticker-item">Docker</div>
+                    <div class="ticker-item">AWS</div>
+                    <div class="ticker-item">MongoDB</div>
+                </div>
+                <div class="ticker-track backward">
+                    <!-- Second row duplicate -->
+                    <div class="ticker-item">React</div>
+                    <div class="ticker-item">Flask</div>
+                    <div class="ticker-item">Django</div>
+                    <div class="ticker-item">Node.js</div>
+                    <div class="ticker-item">Git</div>
+                    <div class="ticker-item">Docker</div>
+                    <div class="ticker-item">AWS</div>
+                    <div class="ticker-item">MongoDB</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button class="skills-btn" data-bs-toggle="modal" data-bs-target="#skillsModal">
+                View All Skills
+            </button>
+        </div>
+    </section>
+
+    <!-- Skills Modal -->
+    <div class="modal fade" id="skillsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">My Skills</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C++</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>AI/ML</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">Computer Vision</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Web Development</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Node.js</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Tools & Technologies</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#ffffff' },
+            opacity: { value: 0.2 },
+            size: { value: 3 },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#ffffff',
+                opacity: 0.1,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false,
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: true, mode: 'repulse' },
+                resize: true
+            }
+        },
+        retina_detect: true
+    });
+
+    // Add scroll animations
+    const sections = document.querySelectorAll('.bio-section, .education-section, .skills-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(section);
+    });
+</script>
+{% endblock %}

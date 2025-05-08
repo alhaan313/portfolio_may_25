@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/resume.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="resume-container">
+    <div class="intro-section">
+        <h1>My Resume</h1>
+        <p class="lead">Professional Experience & Qualifications</p>
+    </div>
+
+    <div class="resume-wrapper">
+        <div class="resume-card">
+            <div class="resume-actions">
+                <a href="{{ url_for('static', filename='resume/resume.pdf') }}" download class="action-button">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+                <a href="{{ url_for('static', filename='resume/resume.pdf') }}" target="_blank" class="action-button">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open in New Tab
+                </a>
+            </div>
+            <div class="pdf-container">
+                <iframe src="{{ url_for('static', filename='resume/resume.pdf') }}" type="application/pdf"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

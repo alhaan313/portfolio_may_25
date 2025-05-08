@@ -1,0 +1,61 @@
+{
+    "internships": [
+      {
+        "id": "boeing",
+        "organization": "Boeing India Private Limited",
+        "role": "Software Engineer Intern",
+        "duration": "July 01, 2024 – September 11, 2024",
+        "category": "tech",
+        "tech_stack": ["Django", "Computer Vision", ".NET (basic)"],
+        "description": "Worked as a Software Engineer Intern, successfully completed assigned tasks with satisfaction.",
+        "certificate_link": "static/internship_pdfs/boeing.pdf"
+      },
+      {
+        "id": "excellerate",
+        "organization": "Excellerate",
+        "role": "Data Visualization Intern",
+        "duration": "September 26, 2023",
+        "category": "tech",
+        "tech_stack": ["Power BI", "Tableau"],
+        "description": "Completed a virtual internship focused on data visualization techniques and tools.",
+        "certificate_link": "static/internship_pdfs/excellerate.pdf"
+      },
+      {
+        "id": "mentorsity",
+        "organization": "Mentorsity",
+        "role": "HR Intern",
+        "duration": "March 04, 2023 – July 04, 2023",
+        "category": "non-tech",
+        "description": "Successfully completed a 4-month Human Resources Internship demonstrating strong work ethic and efficiency.",
+        "certificate_link": "static/internship_pdfs/mentorsity.pdf"
+      },
+      {
+        "id": "gorilla",
+        "organization": "Gorilla Studio",
+        "role": "Marketing Intern",
+        "duration": "April 26, 2023 – May 26, 2023",
+        "category": "non-tech",
+        "description": "Worked in LinkedIn marketing, scheduling meetings, and sales strategy; flexible remote internship with potential employment.",
+        "certificate_link": null
+      },
+      {
+        "id": "omnijobs",
+        "organization": "OmniJobs",
+        "role": "Business Development Trainee",
+        "duration": "July 14, 2023 – September 14, 2023",
+        "category": "non-tech",
+        "description": "Participated in 2-stage internship program involving classroom training and on-the-job training in business development.",
+        "certificate_link": null
+      },
+      {
+        "id": "hope_foundation",
+        "organization": "Hope Foundation",
+        "role": "Virtual Intern (Social Projects)",
+        "duration": "September 06, 2022 – October 06, 2022",
+        "category": "non-tech",
+        "description": "Contributed to poster design, digital marketing, crowdfunding, social entrepreneurship, and legal documentation. Awarded A grade.",
+        "certificate_link": "static/internship_pdfs/hamari_pahchan.pdf"
+      }
+    ]
+  }
+  

@@ -1,0 +1,224 @@
+:root {
+    --primary: #0d6efd;
+    --primary-dark: #0b5ed7;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --card-shadow: 0 10px 20px rgba(13, 110, 253, 0.1);
+}
+
+body {
+    background: var(--light);
+}
+
+.hackathon-container {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--light);
+    overflow-x: hidden;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 5rem 2rem 7rem;
+    margin: 0;
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.intro-section::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--light);
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.intro-section .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hackathon-grid {
+    margin-top: -4rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hackathon-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.hackathon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.hackathon-card:hover .card-header i {
+    transform: scale(1.1);
+    background: rgba(13, 110, 253, 0.15);
+}
+
+.hackathon-card:nth-child(2) { animation-delay: 0.1s; }
+.hackathon-card:nth-child(3) { animation-delay: 0.2s; }
+.hackathon-card:nth-child(4) { animation-delay: 0.3s; }
+.hackathon-card:nth-child(5) { animation-delay: 0.4s; }
+
+.card-content {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    background: rgba(13, 110, 253, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2d3748;
+}
+
+.meta-info {
+    margin-bottom: auto;
+    padding: 0.5rem 0;
+    flex-grow: 1;
+}
+
+.meta-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.meta-info i {
+    color: var(--primary);
+    width: 16px;
+}
+
+.certificate-link {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.certificate-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+    background: var(--primary-dark);
+    color: white;
+}
+
+.date-badge {
+    padding: 0.35rem 0.75rem;
+    background: #f1f5f9;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-left: auto;
+    font-weight: 500;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 3rem 1rem;
+        margin: -3rem -15px 2rem;
+    }
+
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+
+    .hackathon-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}

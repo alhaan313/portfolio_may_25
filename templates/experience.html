@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/experience.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="experience-container">
+    <div class="intro-section">
+        <h2>My Experience</h2>
+        <p class="lead">Exploring diverse roles and building meaningful experiences</p>
+    </div>
+    
+    <div class="container">
+        <div class="timeline">
+            {% for internship in data %}
+            <div class="timeline-item {{ 'left' if loop.index is odd else 'right' }}">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="category-badge {{ internship.category }}">
+                            {{ internship.category }}
+                        </span>
+                        <h5 class="card-title">{{ internship.organization }}</h5>
+                        <h6 class="card-subtitle">{{ internship.role }}</h6>
+                        <p class="duration">
+                            <i class="fas fa-calendar-alt"></i>
+                            {{ internship.duration }}
+                        </p>
+                        <p class="card-text">{{ internship.description }}</p>
+                        {% if internship.tech_stack %}
+                        <div class="tech-stack">
+                            {% for tech in internship.tech_stack %}
+                            <span class="tech-badge">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% if internship.certificate_link %}
+                        <a href="{{ internship.certificate_link }}" class="certificate-link" target="_blank">
+                            <i class="fas fa-certificate"></i>
+                            View Certificate
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.timeline-item').forEach((item) => {
+        observer.observe(item);
+    });
+});
+</script>
+{% endblock %}

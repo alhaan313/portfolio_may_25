@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/hackathon.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="hackathon-container">
+    <div class="intro-section">
+        <div class="intro-content">
+            <span class="badge">My Journey</span>
+            <h1>Hackathon Experience</h1>
+            <p class="lead">Turning challenges into opportunities through innovative solutions and collaborative development.</p>
+        </div>
+        <div class="intro-shape"></div>
+    </div>
+
+    <div class="hackathon-grid">
+        <div class="hackathon-card featured">
+            <div class="card-content">
+                <div class="card-header">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Flipkart GRiD 4.0</h3>
+                    <span class="date-badge">2022</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <p><i class="fas fa-users"></i> <strong>Team:</strong> Bug Saboteurs</p>
+                        <p><i class="fas fa-laptop-code"></i> <strong>Event:</strong> E-Commerce & Tech Quiz (Level 1)</p>
+                        <p><i class="fas fa-university"></i> <strong>Institution:</strong> HITS, Chennai</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='certificates/flipkart.pdf') }}" class="certificate-link">
+                        <i class="fas fa-certificate"></i>
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hackathon-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Codefiesta</h3>
+                    <span class="date-badge">2022</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <p><i class="fas fa-users"></i> <strong>Team:</strong> The Bug Busters</p>
+                        <p><i class="fas fa-code"></i> <strong>Event:</strong> National-Level Coding Fest</p>
+                        <p><i class="fas fa-building"></i> <strong>Organizer:</strong> SMVIT, Bengaluru</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='certificates/codefiesta.pdf') }}" class="certificate-link">
+                        <i class="fas fa-certificate"></i>
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hackathon-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <i class="fas fa-globe"></i>
+                    <h3>Code With GlobalShala 3.0</h3>
+                    <span class="date-badge">2022</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <p><i class="fas fa-code"></i> <strong>Event:</strong> Social Impact Hackathon</p>
+                        <p><i class="fas fa-building"></i> <strong>Organizer:</strong> GlobalShala & Saint Louis University</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='certificates/cwg.pdf') }}" class="certificate-link">
+                        <i class="fas fa-certificate"></i>
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hackathon-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Rakathon 2022</h3>
+                    <span class="date-badge">2022</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <p><i class="fas fa-clock"></i> <strong>Event Type:</strong> 24-Hour Coding Sprint</p>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>Dates:</strong> 22nd–23rd July 2022</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='certificates/rakathon.pdf') }}" class="certificate-link">
+                        <i class="fas fa-certificate"></i>
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hackathon-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <i class="fas fa-medal"></i>
+                    <h3>IICC</h3>
+                    <span class="date-badge">2022</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta-info">
+                        <p><i class="fas fa-code"></i> <strong>Event:</strong> Innovate India Coding Championship</p>
+                        <p><i class="fas fa-building"></i> <strong>Organizer:</strong> Coding Ninjas</p>
+                        <p><i class="fas fa-trophy"></i> <strong>Achievement:</strong> Cleared 2 Rounds</p>
+                        <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> 29th July 2022</p>
+                    </div>
+                    <a href="{{ url_for('static', filename='certificates/iicc_round2.pdf') }}" class="certificate-link">
+                        <i class="fas fa-certificate"></i>
+                        View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
