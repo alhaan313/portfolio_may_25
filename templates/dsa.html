@@ -17,8 +17,7 @@
     <div class="profiles-grid">
         {% for profile in profiles %}
         <div class="profile-card" style="--accent-color: {{ profile.color }}; --card-color-rgb: {{ profile.color.lstrip('#') | rgb_values }};">
-            <div class="profile-icon">
-                <i class="{{ profile.icon }}"></i>
+            <div class="profile-icon" data-platform="{{ profile.icon }}">
             </div>
             <h3>{{ profile.platform }}</h3>
             <span class="username">@{{ profile.username }}</span>

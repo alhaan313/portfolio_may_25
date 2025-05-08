@@ -342,4 +342,36 @@
         margin: 0.5rem;
         max-width: 100%;
     }
+
+    .video-overlay {
+        opacity: 1;
+        background: none;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0.5rem;
+    }
+
+    .video-overlay i {
+        color: white;
+        font-size: 1.25rem;
+        background: rgba(13, 110, 253, 0.9);
+        padding: 0.5rem;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0.9;
+        transform: none;
+    }
+
+    .video-overlay i::before {
+        content: '\f06e';  /* FontAwesome eye icon */
+    }
+
+    .project-media:hover .video-overlay {
+        opacity: 1;
+    }
+
+    .project-media:hover .video-overlay i {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }

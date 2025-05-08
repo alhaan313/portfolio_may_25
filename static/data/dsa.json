@@ -1,39 +1,39 @@
 {
   "profiles": [
     {
+      "platform": "LeetCode",
+      "username": "alhaan313",
+      "url": "https://www.leetcode.com/u/alhaan313",
+      "icon": "leetcode",
+      "color": "#F9A800"
+    },
+    {
       "platform": "GeeksforGeeks",
       "username": "amdalhaan",
       "url": "https://www.geeksforgeeks.org/user/amdalhaan/",
-      "icon": "fas fa-code",
+      "icon": "gfg",
       "color": "#2F8D46"
     },
     {
       "platform": "HackerEarth",
       "username": "alhaan",
       "url": "https://www.hackerearth.com/practice/",
-      "icon": "fas fa-laptop-code",
+      "icon": "hackerearth",
       "color": "#323754"
     },
     {
       "platform": "Educative.io",
       "username": "alhaan",
       "url": "https://www.educative.io/learn/home",
-      "icon": "fas fa-graduation-cap",
+      "icon": "educative",
       "color": "#4B23D0"
     },
     {
       "platform": "Naukri Code360",
       "username": "alhaannn",
       "url": "https://www.naukri.com/code360/profile/alhaannn",
-      "icon": "fas fa-terminal",
+      "icon": "code360",
       "color": "#1B7FED"
-    },
-    {
-        "platform": "LeetCode",
-        "username": "alhaan313",
-        "url": "https://www.leetcode.com/u/alhaan313",
-        "icon": "fas fa-code",
-        "color": "#F9A800"
-      }
+    }
   ]
 }
