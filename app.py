@@ -19,7 +19,8 @@ app.jinja_env.filters['rgb_values'] = rgb_values
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    projects_data = load_json_data('projects.json')
+    return render_template('home.html', projects=projects_data)
 
 @app.route('/projects')
 def projects():

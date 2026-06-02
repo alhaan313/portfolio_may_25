@@ -1,242 +1,280 @@
 {% extends "base.html" %}
 
-{% block styles %}
-    {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
-{% endblock %}
-
 {% block content %}
-<div class="home-container">
-    <section class="hero-section">
-        <div id="particles-js" class="particles-container"></div>
-        <div class="container position-relative">
-            <div class="hero-content text-center">
-                <h1 class="hero-title">Alhaan</h1>
-                <div class="hero-subtitle-wrapper">
-                    <p class="hero-subtitle">AI & Machine Learning Engineer | SDE</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/alhaan313" class="social-link">
-                        <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="social-icon">
-                    </a>
-                    <a href="https://www.linkedin.com/in/alhaan/" class="social-link">
-                        <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="social-icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-shape"></div>
-    </section>
 
-    <section class="bio-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="profile-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/my_image.jpeg') }}" alt="Profile Picture" class="profile-image">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="bio-content">
-                        <p class="bio-text">
-                            As a passionate and innovative technologist, I thrive on turning complex challenges into elegant solutions. My journey in computer science has been driven by an insatiable curiosity and a commitment to excellence. I specialize in AI/ML and Full Stack Development, constantly pushing the boundaries of what's possible in technology while maintaining a strong focus on creating practical, user-centric solutions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero__left">
+        <div class="hero__label">AI Engineer</div>
 
-    <section class="education-section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="education-card">
-                        <div class="edu-header">
-                            <h3>Hindustan Institute of Technology and Science</h3>
-                            <span class="year-badge">2021-2025</span>
-                        </div>
-                        <p class="degree">B.Tech Computer Science and Engineering (Data Science)</p>
-                        <p class="cgpa">CGPA: 9.1</p>
-                        <p class="graduation-info">Graduated: April 2025</p>
-                    </div>
-                </div>
+        <div class="hero__stats">
+            <div class="hero__stat">
+                <div class="hero__stat-number">+6</div>
+                <div class="hero__stat-label">Projects shipped</div>
+            </div>
+            <div class="hero__stat">
+                <div class="hero__stat-number">+2</div>
+                <div class="hero__stat-label">Years experience</div>
             </div>
         </div>
-    </section>
 
-    <section class="skills-section">
-        <div class="section-title">Skills</div>
-        <div class="skills-ticker-container">
-            <div class="skills-ticker-row">
-                <div class="ticker-track forward">
-                    <div class="ticker-item">Python</div>
-                    <div class="ticker-item">JavaScript</div>
-                    <div class="ticker-item">Java</div>
-                    <div class="ticker-item">C++</div>
-                    <div class="ticker-item">TensorFlow</div>
-                    <div class="ticker-item">PyTorch</div>
-                    <div class="ticker-item">Scikit-learn</div>
-                    <div class="ticker-item">Computer Vision</div>
-                </div>
-                <div class="ticker-track forward">
-                    <!-- First row duplicate -->
-                    <div class="ticker-item">Python</div>
-                    <div class="ticker-item">JavaScript</div>
-                    <div class="ticker-item">Java</div>
-                    <div class="ticker-item">C++</div>
-                    <div class="ticker-item">TensorFlow</div>
-                    <div class="ticker-item">PyTorch</div>
-                    <div class="ticker-item">Scikit-learn</div>
-                    <div class="ticker-item">Computer Vision</div>
-                </div>
-            </div>
-            <div class="skills-ticker-row">
-                <div class="ticker-track backward">
-                    <div class="ticker-item">React</div>
-                    <div class="ticker-item">Flask</div>
-                    <div class="ticker-item">Django</div>
-                    <div class="ticker-item">Node.js</div>
-                    <div class="ticker-item">Git</div>
-                    <div class="ticker-item">Docker</div>
-                    <div class="ticker-item">AWS</div>
-                    <div class="ticker-item">MongoDB</div>
-                </div>
-                <div class="ticker-track backward">
-                    <!-- Second row duplicate -->
-                    <div class="ticker-item">React</div>
-                    <div class="ticker-item">Flask</div>
-                    <div class="ticker-item">Django</div>
-                    <div class="ticker-item">Node.js</div>
-                    <div class="ticker-item">Git</div>
-                    <div class="ticker-item">Docker</div>
-                    <div class="ticker-item">AWS</div>
-                    <div class="ticker-item">MongoDB</div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <button class="skills-btn" data-bs-toggle="modal" data-bs-target="#skillsModal">
-                View All Skills
-            </button>
-        </div>
-    </section>
+        <h1 class="hero__title">Hello</h1>
+        <p class="hero__subtitle">
+            It's <span>Alhaan</span>, an AI engineer<br>who builds intelligent systems
+        </p>
 
-    <!-- Skills Modal -->
-    <div class="modal fade" id="skillsModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">My Skills</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Languages</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">C++</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>AI/ML</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">TensorFlow</span>
-                                <span class="skill-tag">PyTorch</span>
-                                <span class="skill-tag">Scikit-learn</span>
-                                <span class="skill-tag">Computer Vision</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Web Development</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Flask</span>
-                                <span class="skill-tag">Django</span>
-                                <span class="skill-tag">Node.js</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Tools & Technologies</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
+        <div class="hero__scroll">
+            <div class="hero__scroll-line"></div>
+            Scroll down
+        </div>
+
+        <div class="hero__year">2026</div>
+    </div>
+
+    <div class="hero__right">
+        <!-- PHOTO PROMPT: Share your real photo with ChatGPT and use this prompt:
+             "Generate a professional black-and-white portrait headshot of me.
+              I should be looking directly at the camera with a confident, approachable expression.
+              The photo should be cropped from chest up, slightly off-center to the right.
+              I should be wearing a clean, minimal outfit - a dark crew-neck or blazer.
+              Soft studio lighting from the left side, shallow depth of field,
+              high contrast B&W edit. Background should be a soft neutral gray gradient.
+              The vibe should be editorial and modern, like a tech founder's magazine portrait.
+              Output in portrait orientation (3:4 aspect ratio)."
+        -->
+        <img src="{{ url_for('static', filename='images/hero_portrait.png') }}"
+             alt="Alhaan - AI Engineer"
+             class="hero__image">
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <div class="marquee__track">
+        <div class="marquee__item">RAG Pipelines <span>&bull;</span></div>
+        <div class="marquee__item">LLM Automation <span>&bull;</span></div>
+        <div class="marquee__item">Distributed Systems <span>&bull;</span></div>
+        <div class="marquee__item">Reinforcement Learning <span>&bull;</span></div>
+        <div class="marquee__item">System Design <span>&bull;</span></div>
+        <div class="marquee__item">Full Stack <span>&bull;</span></div>
+        <div class="marquee__item">RAG Pipelines <span>&bull;</span></div>
+        <div class="marquee__item">LLM Automation <span>&bull;</span></div>
+        <div class="marquee__item">Distributed Systems <span>&bull;</span></div>
+        <div class="marquee__item">Reinforcement Learning <span>&bull;</span></div>
+        <div class="marquee__item">System Design <span>&bull;</span></div>
+        <div class="marquee__item">Full Stack <span>&bull;</span></div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="section__label reveal">About</div>
+    <h2 class="section__title reveal">The person behind<br>the code.</h2>
+
+    <div class="about__grid">
+        <div class="about__text reveal">
+            <p>
+                Software Engineer with production experience building RAG retrieval pipelines,
+                LLM-driven automation workflows, and scalable distributed backends in Python and Go.
+            </p>
+            <p>
+                At Revalgo AI, I independently architected an end-to-end vendor sourcing platform
+                for enterprise distributors and led a 5-engineer team delivering features tied to
+                $140K+ in annual contract value. Previously at Boeing India, I replaced legacy tooling
+                with modern web and desktop applications that cut task completion time by 40%.
+            </p>
+            <p>
+                I care about building systems that work at scale, from embedding pipelines and
+                vector search to multithreaded servers and cloud automation. When I'm not writing
+                code, I'm probably solving a Rubik's cube or watching F1.
+            </p>
+        </div>
+
+        <div class="about__details reveal reveal-delay-1">
+            <div class="about__detail">
+                <div class="about__detail-label">Name</div>
+                <div class="about__detail-value">A. Mohammed Alhaan</div>
+            </div>
+            <div class="about__detail">
+                <div class="about__detail-label">Education</div>
+                <div class="about__detail-value">B.Tech CSE (AI & Data Science), CGPA 9.2<br>HITS, Chennai, Class of 2025</div>
+            </div>
+            <div class="about__detail">
+                <div class="about__detail-label">Currently</div>
+                <div class="about__detail-value">AI Engineer @ Revalgo AI</div>
+            </div>
+            <div class="about__detail">
+                <div class="about__detail-label">Links</div>
+                <div class="about__detail-value">
+                    <a href="https://github.com/alhaan313" target="_blank">GitHub</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/alhaan/" target="_blank">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="mailto:a.md.alhaan@gmail.com">Email</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+</section>
 
-{% block scripts %}
-{{ super() }}
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-    particlesJS('particles-js', {
-        particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: '#ffffff' },
-            opacity: { value: 0.2 },
-            size: { value: 3 },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.1,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: { enable: true, mode: 'repulse' },
-                resize: true
-            }
-        },
-        retina_detect: true
-    });
+<div class="section__divider"></div>
 
-    // Add scroll animations
-    const sections = document.querySelectorAll('.bio-section, .education-section, .skills-section');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+    <div class="section__label reveal">Experience</div>
+    <h2 class="section__title reveal">Where I've<br>made impact.</h2>
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        observer.observe(section);
-    });
-</script>
+    <div class="experience__list">
+        <div class="exp-card reveal">
+            <div class="exp-card__period">Jul 2025 - Present</div>
+            <div class="exp-card__content">
+                <h3 class="exp-card__company">Revalgo AI</h3>
+                <div class="exp-card__role">AI Engineer &bull; Remote</div>
+                <ul class="exp-card__desc">
+                    <li>Independently architected and shipped an end-to-end non-stock product sourcing platform including backend APIs, vendor integration layer, scraping infrastructure, and multi-tenant database schema</li>
+                    <li>Built and optimized production RAG retrieval pipelines: ingested customer product catalogs, generated OpenAI embeddings, and indexed vector data into Elasticsearch</li>
+                    <li>Designed a facade-pattern-based dynamic vendor routing system with runtime class loading, enabling plug-and-play vendor onboarding</li>
+                    <li>Led delivery of a Purchase Order Automation platform integrating P21 ERP and Zendesk via Azure Logic Apps; coordinated a 5-engineer team</li>
+                    <li>Delivered a time-critical vendor integration that secured a customer contract worth $140K+ in annual recurring revenue</li>
+                </ul>
+                <div class="exp-card__tags">
+                    <span class="exp-tag">Python</span>
+                    <span class="exp-tag">RAG</span>
+                    <span class="exp-tag">OpenAI</span>
+                    <span class="exp-tag">Elasticsearch</span>
+                    <span class="exp-tag">Azure</span>
+                    <span class="exp-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="exp-card reveal">
+            <div class="exp-card__period">Jul - Sep 2024</div>
+            <div class="exp-card__content">
+                <h3 class="exp-card__company">Boeing India</h3>
+                <div class="exp-card__role">Software Engineer Intern &bull; Chennai</div>
+                <ul class="exp-card__desc">
+                    <li>Built a Django web application replacing a legacy internal CLI tool, cutting user task completion time by 40%</li>
+                    <li>Migrated the application to a PyQt desktop client to comply with internal data-security policies</li>
+                    <li>Developed a Python OCR pipeline (Tesseract + OpenCV) to extract structured data from scanned PDFs, eliminating ~4 hours of manual processing per document</li>
+                </ul>
+                <div class="exp-card__tags">
+                    <span class="exp-tag">Django</span>
+                    <span class="exp-tag">PyQt</span>
+                    <span class="exp-tag">Tesseract</span>
+                    <span class="exp-tag">OpenCV</span>
+                    <span class="exp-tag">Python</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section__divider"></div>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+    <div class="section__label reveal">Selected Work</div>
+    <h2 class="section__title reveal">Things I've<br>built.</h2>
+
+    <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card reveal {% if loop.index > 2 %}reveal-delay-{{ loop.index % 3 }}{% endif %}">
+            <img src="{{ url_for('static', filename=project.image) }}"
+                 alt="{{ project.name }}"
+                 class="project-card__image"
+                 onerror="this.style.display='none'">
+            <div class="project-card__body">
+                <h3 class="project-card__title">{{ project.name }}</h3>
+                <p class="project-card__desc">{{ project.highlight }}</p>
+                <div class="project-card__tags">
+                    {% for tech in project.tech_used %}
+                    <span class="project-card__tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <div class="project-card__links">
+                    {% if project.github %}
+                    <a href="{{ project.github }}" target="_blank" class="project-card__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        GitHub
+                    </a>
+                    {% endif %}
+                    {% if project.hosted_link %}
+                    <a href="{{ project.hosted_link }}" target="_blank" class="project-card__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Live Demo
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section--full skills" id="skills">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 3rem;">
+        <div class="section__label reveal">Toolkit</div>
+        <h2 class="section__title reveal">What I work<br>with.</h2>
+
+        <div class="skills__grid reveal reveal-delay-1">
+            <div class="skill-group">
+                <div class="skill-group__title">Languages</div>
+                <div class="skill-group__items">
+                    <div class="skill-group__item">Python</div>
+                    <div class="skill-group__item">Go</div>
+                    <div class="skill-group__item">C++</div>
+                    <div class="skill-group__item">SQL</div>
+                    <div class="skill-group__item">JavaScript</div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group__title">AI / ML</div>
+                <div class="skill-group__items">
+                    <div class="skill-group__item">RAG & LLMs</div>
+                    <div class="skill-group__item">OpenAI / Hugging Face</div>
+                    <div class="skill-group__item">LangChain</div>
+                    <div class="skill-group__item">PyTorch</div>
+                    <div class="skill-group__item">Reinforcement Learning</div>
+                    <div class="skill-group__item">Embeddings & Vector Search</div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group__title">Backend & Infra</div>
+                <div class="skill-group__items">
+                    <div class="skill-group__item">Flask / FastAPI / Django</div>
+                    <div class="skill-group__item">PostgreSQL / MongoDB</div>
+                    <div class="skill-group__item">Elasticsearch / Redis</div>
+                    <div class="skill-group__item">Docker</div>
+                    <div class="skill-group__item">Azure / AWS</div>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group__title">Concepts</div>
+                <div class="skill-group__items">
+                    <div class="skill-group__item">Distributed Systems</div>
+                    <div class="skill-group__item">System Design</div>
+                    <div class="skill-group__item">Microservices</div>
+                    <div class="skill-group__item">Multi-tenant Architecture</div>
+                    <div class="skill-group__item">Multithreading</div>
+                    <div class="skill-group__item">CI/CD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section" style="text-align: center; padding: 6rem 3rem;">
+    <div class="reveal">
+        <div class="section__label" style="text-align: center;">Let's Connect</div>
+        <h2 class="section__title" style="margin-bottom: 2rem;">Have a project in<br>mind? Let's talk.</h2>
+        <a href="mailto:a.md.alhaan@gmail.com" class="nav__cta" style="font-size: 1rem; padding: 1rem 2.5rem; display: inline-block;">
+            Get In Touch <span class="arrow">&nearr;</span>
+        </a>
+    </div>
+</section>
+
 {% endblock %}
